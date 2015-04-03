@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pinch Zoom</title>
+        <meta charset="UTF-8">
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <style>
+            #wrap {
+                margin-top: 120px;
+                width: 500px;
+                height: 400px;
+                margin-left: auto;
+                margin-right: auto;
+                background-image: url("sample.jpg");
+                background-repeat: no-repeat;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="pinch-zoom.js"></script>
+        <script>
+            $(function() {
+                $("#wrap").pinchzoom();
+            });
+        </script>
+    </body>
+</html>
