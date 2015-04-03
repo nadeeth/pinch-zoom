@@ -14,7 +14,7 @@
             width = img.width;
         }
         
-        width = parseInt(width);alert(width);
+        width = parseInt(width);
                 
         var prev_distance = 0;
 
