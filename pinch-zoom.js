@@ -2,7 +2,20 @@
 
     $.fn.pinchzoom = function(options) {
 
-        var width = $(this).width();
+        var options = options ? options : {};
+
+        options.min_width = options.min_width ? options.min_width : '50';
+        var size = (this).css('background-size').split(' ');
+        var width = size[1];
+
+        if (width === 'auto') {
+            var img = new Image;
+            img.src = $(this).css('background-image').replace(/url\(|\)$/ig, "");
+            width = img.width;
+        }
+        
+        width = parseInt(width);alert(width);
+                
         var prev_distance = 0;
 
         $(this).on("touchmove", function (event) {
@@ -24,12 +37,12 @@
                     if (cur_distance > prev_distance) {//Zoom In
                         width += 10;
                     }
-                    if (cur_distance < prev_distance) {//Zoom Out
+                    if ((cur_distance < prev_distance) && (width > options.min_width)) {//Zoom Out
                         width -= 10;
                     }
 
                     //Keep the higth auto to preserve the original aspect ratio
-                    $(this).css('background-size', 'auto ' + width + 'px');
+                    $(this).css('background-size', width + 'px auto');
                 }
 
                 prev_distance = cur_distance;
