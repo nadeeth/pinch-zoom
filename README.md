@@ -39,3 +39,31 @@ $("#wrap").pinchzoom({
     width : 500
 });
 ```
+
+### done
+
+    done : function
+
+A callback function to run after the zooming is done.
+
+Ex: 
+```javascript
+$("#wrap").pinchzoom({
+    done : function() {
+        var size = $("#wrap").css("background-size");
+        //Do Something
+});
+```
+
+### min_width
+
+    min_width : 200
+
+Minimum size to zoom in. Image will not shrink below this size. Default is 50 pixels. 
+
+Ex: 
+```javascript
+$("#wrap").pinchzoom({
+    min_width : 200
+});
+```
