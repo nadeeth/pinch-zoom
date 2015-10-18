@@ -3,7 +3,7 @@
 
 ## Installation
 
-Clone this [repository](https://github.com/weaselshark/pinch-zoom.git) or download the [latest build](https://github.com/weaselshark/pinch-zoom/archive/master.zip).
+Clone this [repository](https://github.com/nadeeth/pinch-zoom.git) or download the [latest build](https://github.com/nadeeth/pinch-zoom/archive/master.zip).
 
 Include jQuery library and google maps API places library:
 
